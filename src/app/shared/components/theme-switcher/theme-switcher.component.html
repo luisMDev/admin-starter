@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center nav-link link-body-emphasis">
+  <i class="ti ti-sun me-2 mb-1"></i>
+  <div class="form-check form-switch m-0">
+    <input
+      (click)="toggleTheme()"
+      class="form-check-input"
+      style="cursor: pointer"
+      type="checkbox"
+      role="switch"
+      id="flexSwitchCheckDefault"
+      [ngModel]="(theme$ | async) === 'dark'"
+    />
+  </div>
+  <i class="ti ti-moon ms-1 mb-1"></i>
+</div>

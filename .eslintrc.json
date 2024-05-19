@@ -1,0 +1,101 @@
+{
+  "root": true,
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "plugins": ["import"],
+      "parserOptions": {
+        "project": ["**/tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "@angular-eslint/template/no-negated-async": "off",
+        "@angular-eslint/no-input-rename": "off",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "@typescript-eslint/unbound-method": "off",
+        "import/no-relative-packages": "off",
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit",
+            "ignoredMethodNames": ["ngOnInit", "ngOnDestroy", "ngOnChanges", "ngAfterContentInit", "ngAfterViewInit"],
+            "overrides": {
+              "constructors": "no-public"
+            }
+          }
+        ],
+        "id-blacklist": "off",
+        "id-match": "off",
+        "no-restricted-globals": "off",
+        "no-underscore-dangle": "off",
+        "no-console": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-floating-promises": "warn",
+        "no-unused-vars": "off",
+        "import/no-unresolved": "off",
+        "no-alert": "off",
+        "import/prefer-default-export": "off",
+        "class-methods-use-this": "off",
+        "lines-between-class-members": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "no-restricted-syntax": "warn",
+        "@typescript-eslint/restrict-plus-operands": "off",
+        "no-param-reassign": "off",
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "import/order": "off",
+        "no-case-declarations": "off",
+        "curly": ["error", "all"],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "strictNullChecks": "off",
+        "@typescript-eslint/quotes": "off",
+        "@typescript-eslint/explicit-function-return-type": "warn",
+        "linebreak-style": "off"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:prettier/recommended", "plugin:@angular-eslint/template/recommended"],
+      "rules": {
+        "@angular-eslint/template/no-negated-async": "off"
+      }
+    },
+    {
+      "files": ["*.scss"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:prettier/recommended"],
+      "rules": {}
+    },
+    {
+      "files": ["*.css"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:prettier/recommended"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:prettier/recommended"],
+      "parserOptions": {
+        "ecmaVersion": "latest"
+      },
+      "env": {
+        "es6": true
+      }
+    }
+  ]
+}

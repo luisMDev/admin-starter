@@ -1,0 +1,22 @@
+@mixin dashboard-body() {
+  flex: 1;
+  display: block;
+}
+
+.top-cover {
+  background-color: rgba(var(--bs-secondary-bg-rgb), 1);
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100px;
+}
+
+label {
+  font-weight: 600;
+}
+
+.top-cover-card {
+  margin-top: -71px;
+  .card-header {
+    min-height: 70px;
+  }
+}

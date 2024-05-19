@@ -1,0 +1,13 @@
+:host {
+  width: 250px;
+  display: flex;
+  padding: 0;
+  i {
+    width: 16px;
+    height: 16px;
+  }
+  .active {
+    color: RGBA(var(--bs-primary-rgb), 1) !important;
+    font-weight: 600;
+  }
+}

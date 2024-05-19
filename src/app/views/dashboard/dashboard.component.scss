@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  height: 100vh;
+  width: 100%;
+
+  .main-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-right: max(80px, min(399.1875px, 399.1875px + 1650px / 2 - 50vw));
+  }
+
+  .main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+    overflow-y: auto;
+    padding: 0;
+  }
+}

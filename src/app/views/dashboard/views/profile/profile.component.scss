@@ -1,0 +1,5 @@
+@import 'main';
+
+:host {
+  @include dashboard-body;
+}

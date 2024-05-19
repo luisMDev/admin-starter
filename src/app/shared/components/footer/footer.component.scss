@@ -1,0 +1,7 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+:host {
+  margin-top: map-get($spacers, 4);
+  margin-bottom: map-get($spacers, 3);
+}
