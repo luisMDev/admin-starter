@@ -1,31 +1,43 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID, WritableSignal, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AppThemeService {
-  public theme$: BehaviorSubject<string> = new BehaviorSubject<string>('light');
+  public theme$: WritableSignal<string> = signal<string>('light');
 
-  constructor() {
-    const initialTheme = this.getInitialTheme();
-    this.setTheme(initialTheme);
+  constructor(@Inject(PLATFORM_ID) private platformId: unknown) {
+    if (isPlatformBrowser(this.platformId)) {
+      const initialTheme = this.getInitialTheme();
+      this.setTheme(initialTheme);
+    }
   }
 
   public toggleTheme(): void {
-    const newTheme = this.theme$.value === 'light' ? 'dark' : 'light';
+    const newTheme = this.theme$() === 'light' ? 'dark' : 'light';
     this.setTheme(newTheme);
   }
 
   public setTheme(theme: string): void {
-    this.theme$.next(theme);
+    this.theme$.set(theme);
     const body = document.body as HTMLElement;
     body.setAttribute('data-bs-theme', theme);
-    localStorage.setItem('theme', theme);
+
+    if (isPlatformBrowser(this.platformId)) {
+      try {
+        localStorage.setItem('theme', theme);
+      } catch (error) {
+        console.error('Error setting theme in local storage:', error);
+      }
+    }
   }
 
   private getInitialTheme(): string {
-    const theme = localStorage.getItem('theme');
-    return theme || 'light';
+    if (isPlatformBrowser(this.platformId)) {
+      const theme = localStorage.getItem('theme');
+      return theme || 'light';
+    }
+    return 'light';
   }
 }

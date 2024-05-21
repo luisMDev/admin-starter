@@ -8,7 +8,7 @@
       type="checkbox"
       role="switch"
       id="flexSwitchCheckDefault"
-      [ngModel]="(theme$ | async) === 'dark'"
+      [ngModel]="theme$() === 'dark'"
     />
   </div>
   <i class="ti ti-moon ms-1 mb-1"></i>
