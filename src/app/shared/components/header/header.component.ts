@@ -5,7 +5,7 @@ import { ArcAuthService, ArcConfig, ArcUser } from '@arcane-auth/ngx-client';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
-import { ThemeSwitcherComponent } from '../theme-switcher/theme-switcher.component';
+import { ThemeSwitcherComponent } from '@luismdev/ngx-utils/theme-switcher';
 
 @Component({
   selector: 'admin-starter-header',
