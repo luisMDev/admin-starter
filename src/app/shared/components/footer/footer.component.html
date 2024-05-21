@@ -1,20 +1,22 @@
 <div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center" *ngIf="config$ | async as config">
-    <section class="col d-flex align-items-center my-1">
-      <span class="fs-7 text-muted me-4">{{ 'FOOTER.ALL_RIGHTS_RESERVED' | translate:{name:config.PROJECT_NAME, year: year } }} </span>
-    </section>
-    <section class="nav col justify-content-end d-flex my-1">
-      <span class="fs-7 text-muted mx-4"> {{ 'FOOTER.VERSION' | translate:{version:version} }} </span>
-      <ng-container *ngIf="config?.LINK_DOCS">
-        <div class="vr"></div>
-        <a class="fs-7 text-muted mx-4 link-underline-light" [href]="config?.LINK_DOCS"> {{ 'FOOTER.DOCUMENTATION' | translate }} </a>
-      </ng-container>
-      <ng-container *ngIf="config?.LINK_GITHUB">
-        <div class="vr"></div>
-        <a class="fs-7 text-muted mx-4 link-underline-light" [href]="config?.LINK_GITHUB">
-          <i class="ti ti-brand-github"></i>
-        </a>
-      </ng-container>
-    </section>
-  </footer>
+  @if (config$ | async; as config) {
+    <footer class="d-flex flex-wrap justify-content-between align-items-center">
+      <section class="col d-flex align-items-center my-1">
+        <span class="fs-7 text-muted me-4">{{ 'FOOTER.ALL_RIGHTS_RESERVED' | translate: { name: config.PROJECT_NAME, year: year } }} </span>
+      </section>
+      <section class="nav col justify-content-end d-flex my-1">
+        <span class="fs-7 text-muted mx-4"> {{ 'FOOTER.VERSION' | translate: { version: version } }} </span>
+        @if (config?.LINK_DOCS) {
+          <div class="vr"></div>
+          <a class="fs-7 text-muted mx-4 link-underline-light" [href]="config?.LINK_DOCS"> {{ 'FOOTER.DOCUMENTATION' | translate }} </a>
+        }
+        @if (config?.LINK_GITHUB) {
+          <div class="vr"></div>
+          <a class="fs-7 text-muted mx-4 link-underline-light" [href]="config?.LINK_GITHUB">
+            <i class="ti ti-brand-github"></i>
+          </a>
+        }
+      </section>
+    </footer>
+  }
 </div>
