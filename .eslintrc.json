@@ -12,7 +12,6 @@
       "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:import/typescript",
         "plugin:prettier/recommended"
       ],
@@ -74,7 +73,8 @@
       "files": ["*.html"],
       "extends": ["plugin:prettier/recommended", "plugin:@angular-eslint/template/recommended"],
       "rules": {
-        "@angular-eslint/template/no-negated-async": "off"
+        "@angular-eslint/template/no-negated-async": "off",
+        "@angular-eslint/template/prefer-control-flow": "error"
       }
     },
     {

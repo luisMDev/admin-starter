@@ -10,15 +10,15 @@
   "endOfLine": "auto",
   "overrides": [
     {
-      "files": "*.component.html",
+      "files": "*.html",
       "options": {
         "parser": "angular"
       }
     },
     {
-      "files": "*.html",
+      "files": "*.component.html",
       "options": {
-        "parser": "html"
+        "parser": "angular"
       }
     }
   ]

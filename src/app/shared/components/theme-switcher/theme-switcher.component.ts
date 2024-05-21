@@ -1,21 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, WritableSignal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
-import { Observable } from 'rxjs';
 import { AppThemeService } from '../../../core/services/app-theme.service';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'admin-starter-theme-switcher',
   templateUrl: './theme-switcher.component.html',
   styleUrl: './theme-switcher.component.scss',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule, TranslateModule, NgbDropdownModule],
+  imports: [FormsModule, RouterModule, TranslateModule, NgbDropdownModule],
 })
 export class ThemeSwitcherComponent implements OnInit {
-  public theme$: Observable<string>;
+  public theme$: WritableSignal<string>;
 
   constructor(private appThemeService: AppThemeService) {}
 
