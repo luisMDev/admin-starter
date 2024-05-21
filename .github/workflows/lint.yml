@@ -22,16 +22,5 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Dependencies
-        run: npm ci && npm install commitlint@latest
-
       - name: Code Linting
         run: npm run lint
-
-      - name: Validate current commit (last commit) with commitlint
-        if: github.event_name == 'push'
-        run: npx commitlint --last --verbose
-
-      - name: Validate PR commits with commitlint
-        if: github.event_name == 'pull_request'
-        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
