@@ -50,7 +50,7 @@ export function HttpLoaderFactory(http: HttpBackend): MultiTranslateHttpLoader {
         deps: [HttpBackend],
       },
     }),
-    // NgxErrorHandlerModule,
+    NgxErrorHandlerModule,
     NgbModule,
   ],
   bootstrap: [AppComponent],
