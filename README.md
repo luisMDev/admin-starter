@@ -2,14 +2,14 @@
 
 Welcome to the Angular Admin Starter Project! This project serves as a template to jumpstart your administration panel with a pre-built user system. It's built using Angular and integrates seamlessly with the [Arcane auth](https://github.com/arcane-auth/arcane-auth) system for user authentication and management.
 
-### 📋 Features
+## 📋 Features
 
 - Pre-configured Angular environment with essential modules.
 - Integrated user authentication using [Arcane auth](https://github.com/arcane-auth/arcane-auth).
 - Basic user management functionalities (create, update, delete).
 - Responsive admin dashboard layout.
 
-### 🛠️ Installation
+## 🛠️ Installation
 
 Clone and run the Docker container for [Arcane auth](https://github.com/arcane-auth/arcane-auth) project and follow the instructions in the [README](https://github.com/arcane-auth/arcane-auth/blob/main/README.md) file to set up the docker container and start it with `docker-compose up`.
 
@@ -31,7 +31,7 @@ Clone and run the Docker container for [Arcane auth](https://github.com/arcane-a
    ```
    Open http://localhost:4200 to view it in the browser.
 
-### 🤝 Support
+## 🤝 Support
 
 If you encounter any issues or have questions, please file an issue on the GitHub repository.
 
