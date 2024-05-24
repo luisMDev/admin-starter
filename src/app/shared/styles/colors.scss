@@ -1,0 +1,273 @@
+@import 'bootstrap/scss/bootstrap';
+
+// Colors (Uncomment the ones you want to use)
+
+// $blue: #0d6efd;
+// $blue-100: #e6fcf5;
+// $blue-200: #c3fae8;
+// $blue-300: #96f2d2;
+// $blue-400: #63e6be;
+// $blue-500: #46caa5;
+// $blue-600: #38b694;
+// $blue-700: #2bbbad;
+// $blue-800: #209897;
+// $blue-900: #1a7373;
+
+// $indigo: #6610f2;
+// $indigo-100: #e6fcf5;
+// $indigo-200: #c3fae8;
+// $indigo-300: #96f2d2;
+// $indigo-400: #63e6be;
+// $indigo-500: #46caa5;
+// $indigo-600: #38b694;
+// $indigo-700: #2bbbad;
+// $indigo-800: #209897;
+// $indigo-900: #1a7373;
+
+// $purple: #7e22ce;
+// $purple-100: #e6fcf5;
+// $purple-200: #c3fae8;
+// $purple-300: #96f2d2;
+// $purple-400: #63e6be;
+// $purple-500: #46caa5;
+// $purple-600: #38b694;
+// $purple-700: #2bbbad;
+// $purple-800: #209897;
+// $purple-900: #1a7373;
+
+// $pink: #d63384;
+// $pink-100: #e6fcf5;
+// $pink-200: #c3fae8;
+// $pink-300: #96f2d2;
+// $pink-400: #63e6be;
+// $pink-500: #46caa5;
+// $pink-600: #38b694;
+// $pink-700: #2bbbad;
+// $pink-800: #209897;
+// $pink-900: #1a7373;
+
+// $red: #dc2626;
+// $red-100: #e6fcf5;
+// $red-200: #c3fae8;
+// $red-300: #96f2d2;
+// $red-400: #63e6be;
+// $red-500: #46caa5;
+// $red-600: #38b694;
+// $red-700: #2bbbad;
+// $red-800: #209897;
+// $red-900: #1a7373;
+
+// $orange: #fd826d;
+// $orange-100: #e6fcf5;
+// $orange-200: #c3fae8;
+// $orange-300: #96f2d2;
+// $orange-400: #63e6be;
+// $orange-500: #46caa5;
+// $orange-600: #38b694;
+// $orange-700: #2bbbad;
+// $orange-800: #209897;
+// $orange-900: #1a7373;
+
+// $yellow: #e6fcf5;
+// $yellow-100: #e6fcf5;
+// $yellow-200: #c3fae8;
+// $yellow-300: #96f2d2;
+// $yellow-400: #63e6be;
+// $yellow-500: #46caa5;
+// $yellow-600: #38b694;
+// $yellow-700: #2bbbad;
+// $yellow-800: #209897;
+// $yellow-900: #1a7373;
+
+// $green: #28a745;
+// $green-100: #e6fcf5;
+// $green-200: #c3fae8;
+// $green-300: #96f2d2;
+// $green-400: #63e6be;
+// $green-500: #46caa5;
+// $green-600: #38b694;
+// $green-700: #2bbbad;
+// $green-800: #209897;
+// $green-900: #1a7373;
+
+// $teal: #20c997;
+// $teal-100: #e6fcf5;
+// $teal-200: #c3fae8;
+// $teal-300: #96f2d2;
+// $teal-400: #63e6be;
+// $teal-500: #46caa5;
+// $teal-600: #38b694;
+// $teal-700: #2bbbad;
+// $teal-800: #209897;
+// $teal-900: #1a7373;
+
+// $cyan: #17a2b8;
+// $cyan-100: #e6fcf5;
+// $cyan-200: #c3fae8;
+// $cyan-300: #96f2d2;
+// $cyan-400: #63e6be;
+// $cyan-500: #46caa5;
+// $cyan-600: #38b694;
+// $cyan-700: #2bbbad;
+// $cyan-800: #209897;
+// $cyan-900: #1a7373;
+
+// $gray: #6c757d;
+// $gray-100: #e6fcf5;
+// $gray-200: #c3fae8;
+// $gray-300: #96f2d2;
+// $gray-400: #63e6be;
+// $gray-500: #46caa5;
+// $gray-600: #38b694;
+// $gray-700: #2bbbad;
+// $gray-800: #209897;
+// $gray-900: #1a7373;
+
+// $black: #000;
+// $white: #fff;
+
+// $primary: #28a745;
+// $secondary: #6c757d;
+// $success: #28a745;
+// $info: #17a2b8;
+// $warning: #ffc107;
+// $danger: #dc2626;
+// $light: #f8f9fa;
+// $dark: #343a40;
+
+// $primary-text-emphasis-dark: tint-color($primary, 40%);
+// $secondary-text-emphasis-dark: tint-color($secondary, 40%);
+// $success-text-emphasis-dark: tint-color($success, 40%);
+// $info-text-emphasis-dark: tint-color($info, 40%);
+// $warning-text-emphasis-dark: tint-color($warning, 40%);
+// $danger-text-emphasis-dark: tint-color($danger, 40%);
+// $light-text-emphasis-dark: $gray-100;
+// $dark-text-emphasis-dark: $gray-300;
+
+// $primary-bg-subtle-dark: shade-color($primary, 80%);
+// $secondary-bg-subtle-dark: shade-color($secondary, 80%);
+// $success-bg-subtle-dark: shade-color($success, 80%);
+// $info-bg-subtle-dark: shade-color($info, 80%);
+// $warning-bg-subtle-dark: shade-color($warning, 80%);
+// $danger-bg-subtle-dark: shade-color($danger, 80%);
+// $light-bg-subtle-dark: $gray-800;
+// $dark-bg-subtle-dark: mix($gray-800, $black);
+
+// $primary-border-subtle-dark: shade-color($primary, 40%);
+// $secondary-border-subtle-dark: shade-color($secondary, 40%);
+// $success-border-subtle-dark: shade-color($success, 40%);
+// $info-border-subtle-dark: shade-color($info, 40%);
+// $warning-border-subtle-dark: shade-color($warning, 40%);
+// $danger-border-subtle-dark: shade-color($danger, 40%);
+// $light-border-subtle-dark: $gray-700;
+// $dark-border-subtle-dark: $gray-800;
+
+// $body-color: $gray-300;
+// $body-bg: $gray-900;
+// $body-secondary-color: rgba($body-color, 0.75);
+// $body-secondary-bg: $gray-800;
+// $body-tertiary-color: rgba($body-color, 0.5);
+// $body-tertiary-bg: mix($gray-800, $gray-900, 50%);
+// $body-emphasis-color: $white;
+// $border-color: $gray-700;
+// $border-color-translucent: rgba($white, 0.15);
+// $headings-color: inherit;
+// $link-color: tint-color($primary, 40%);
+// $link-hover-color: shift-color($link-color, -$link-shade-percentage);
+// $code-color: tint-color($code-color, 40%);
+// $mark-color: $body-color;
+// $mark-bg: $yellow-800;
+
+// $body-color-dark: $gray-300;
+// $body-bg-dark: $gray-900;
+// $body-secondary-color-dark: rgba($body-color-dark, 0.75);
+// $body-secondary-bg-dark: $gray-800;
+// $body-tertiary-color-dark: rgba($body-color-dark, 0.5);
+// $body-tertiary-bg-dark: mix($gray-800, $gray-900, 50%);
+// $body-emphasis-color-dark: $white;
+// $border-color-dark: $gray-700;
+// $border-color-translucent-dark: rgba($white, 0.15);
+// $headings-color-dark: inherit;
+// $link-color-dark: tint-color($primary, 40%);
+// $link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
+// $code-color-dark: tint-color($code-color, 40%);
+// $mark-color-dark: $body-color-dark;
+// $mark-bg-dark: $yellow-800;
+
+//
+// Forms
+//
+
+// $form-select-indicator-color-dark: $body-color-dark;
+// $form-select-indicator-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+
+// $form-switch-color-dark: rgba($white, 0.25);
+// $form-switch-bg-image-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color-dark}'/></svg>");
+
+// $form-valid-color-dark: $green-300;
+// $form-valid-border-color-dark: $green-300;
+// $form-invalid-color-dark: $red-300;
+// $form-invalid-border-color-dark: $red-300;
+
+//
+// Accordion
+//
+
+// $accordion-icon-color-dark: $primary-text-emphasis-dark;
+// $accordion-icon-active-color-dark: $primary-text-emphasis-dark;
+
+// $accordion-button-icon-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+// $accordion-button-active-icon-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+// merge with existing $theme-colors map
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+  )
+);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, '$value');
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, '$key', 'text');
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, '$key', 'bg');
+
+// Generate all colors  for the {color}-500, {color}-600... classes
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+$utilities: map-merge(
+  $utilities,
+  (
+    'color':
+      map-merge(
+        map-get($utilities, 'color'),
+        (
+          values: map-merge(map-get(map-get($utilities, 'color'), 'values'), ($all-colors)),
+        )
+      ),
+  )
+);
+
+$font-size-base: 14px;
+$input-btn-font-size: $font-size-base;
+$btn-font-size: $font-size-base;
+$btn-font-weight: 500;
+
+$border-radius: 0.5rem;
+$button-border-radius: 0.5rem;
+$card-border-radius: 1rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 1rem;
+$border-radius-xxl: 2rem;
+$border-radius-pill: 50rem;
+
+$card-spacer-y: 2rem;
+$card-spacer-x: 2rem;
+
+@import 'bootstrap/scss/bootstrap';
