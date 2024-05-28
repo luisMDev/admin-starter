@@ -5,14 +5,13 @@ import { ArcAuthService, ArcConfig, ArcUser } from '@arcane-auth/ngx-client';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
-import { ThemeSwitcherComponent } from '@luismdev/ngx-utils/theme-switcher';
 
 @Component({
   selector: 'admin-starter-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   standalone: true,
-  imports: [CommonModule, RouterModule, TranslateModule, NgbDropdownModule, ThemeSwitcherComponent],
+  imports: [CommonModule, RouterModule, TranslateModule, NgbDropdownModule],
 })
 export class HeaderComponent implements OnInit {
   public user$: Observable<ArcUser>;

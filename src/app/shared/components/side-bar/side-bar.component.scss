@@ -1,13 +1,20 @@
 :host {
-  width: 250px;
   display: flex;
   padding: 0;
+  width: 250px;
+  position: relative;
   i {
     width: 16px;
     height: 16px;
   }
   .active {
-    color: RGBA(var(--bs-primary-rgb), 1) !important;
-    font-weight: 600;
+    color: rgba(var(--bs-primary-rgb), 1) !important;
+    background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+    background-color: rgba(var(--bs-secondary-bg-rgb), 0.5) !important;
+    font-weight: 700;
+  }
+  .logo {
+    height: 30px;
+    object-fit: contain;
   }
 }

@@ -1,16 +1,34 @@
 @if (config$ | async; as config) {
-  <header class="d-flex flex-wrap justify-content-end p-3 bg-body-secondary">
-    <ul class="nav nav-pills">
-      @if (config.LINK_DOCS) {
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-between pt-3 pb-5">
+      <div class="logo">
+        <img class="mb-4 img-fluid logo" src="/assets/images/logo-min.png" alt="" />
+      </div>
+      <ul class="nav nav-pills">
+        @if (config.LINK_DOCS) {
+          <li class="nav-item">
+            <a [href]="config.LINK_DOCS" class="nav-link link-body-emphasis text-muted fw-semibold h-100 d-flex align-items-center">
+              {{ 'HEADER.DOCUMENTATION' | translate }}
+            </a>
+          </li>
+        }
         <li class="nav-item">
-          <a [href]="config.LINK_DOCS" class="nav-link link-body-emphasis text-muted fw-semibold">
-            {{ 'HEADER.DOCUMENTATION' | translate }}
+          <a class="nav-link link-body-emphasis d-flex justify-content-between align-items-center h-100 pe-0" aria-current="page">
+            <div class="d-flex align-items-center">
+              <img
+                [title]="(user$ | async).name"
+                [src]="(user$ | async).avatar"
+                class="me-3 bg-info rounded-circle rounded-circle"
+                style="width: 20px; height: 20px"
+              />
+            </div>
+            <div class="d-flex align-items-center">
+              <button class="btn btn-sm" routerLink="/l/profile"><i class="ti ti-settings"></i></button>
+              <button class="btn btn-sm"><i class="ti ti-logout" (click)="logout()"></i></button>
+            </div>
           </a>
         </li>
-      }
-      <li class="nav-item">
-        <lmdev-theme-switcher></lmdev-theme-switcher>
-      </li>
-    </ul>
-  </header>
+      </ul>
+    </header>
+  </div>
 }

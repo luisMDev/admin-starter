@@ -1,3 +1,9 @@
 :host {
   padding: 0;
+  background: linear-gradient(-180deg, #0e0f11, #ff000000);
+  display: block;
+  .logo {
+    height: 30px;
+    object-fit: contain;
+  }
 }

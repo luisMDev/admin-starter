@@ -1,48 +1,23 @@
-<nav class="d-flex flex-column pt-3 pb-2 w-100 border-end">
-  <ul class="nav flex-column mb-5">
-    <li class="nav-item">
-      <a class="nav-link link-body-emphasis" aria-current="page">
-        <i class="ti ti-home me-3"></i>
-        <b class="text-body-secondary text-uppercase">{{ (config$ | async).PROJECT_NAME }}</b>
-      </a>
-    </li>
-  </ul>
-
+<nav class="d-flex flex-column pb-2 pe-3 w-100 overflow-hidden position-relative">
   @for (item of mainItems; track item.title; let i = $index) {
     @if (item.title) {
-      <b class="px-3 py-1 fs-7 text-secondary text-opacity-50 text-uppercase" [class.mt-4]="i !== 0"> {{ item.title | translate }} </b>
+      <b class="px-3 py-1 mb-2 fs-7 text-secondary text-opacity-50 text-uppercase" [class.mt-4]="i !== 0"> {{ item.title | translate }} </b>
     }
     <ul class="nav flex-column" [class.mb-auto]="i === mainItems.length - 1">
       @for (navIitem of item.items; track navIitem.name) {
         <li class="nav-item">
           <a
-            [routerLink]="[navIitem.routerLink]"
+            [routerLink]="[navIitem.url]"
             routerLinkActive="active"
-            class="nav-link py-1 text-secondary"
+            class="nav-link text-secondary rounded-2"
             aria-current="page"
             [class.text-opacity-50]="!navIitem.active"
           >
-            <i class="pe-none me-3" [class]="navIitem.icon"></i>
+            <i class="pe-none fs-6 fw-light me-3" [class]="navIitem.icon"></i>
             <span class="fs-6"> {{ navIitem.name }} </span>
           </a>
         </li>
       }
     </ul>
   }
-
-  <ul class="nav nav-pills flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-body-emphasis d-flex justify-content-between align-items-center" aria-current="page">
-        <div class="d-flex align-items-center">
-          <!-- <i class="ti ti-user pe-none me-2"></i> -->
-          <img [src]="(user$ | async).avatar" class="mt-1 me-3 bg-info rounded-circle rounded-circle" style="width: 20px; height: 20px" />
-          <b class="link-body-emphasis text-capitalize">{{ (user$ | async).name }}</b>
-        </div>
-        <div class="d-flex align-items-center">
-          <button class="btn btn-sm" routerLink="/l/profile"><i class="ti ti-settings"></i></button>
-          <button class="btn btn-sm"><i class="ti ti-logout" (click)="logout()"></i></button>
-        </div>
-      </a>
-    </li>
-  </ul>
 </nav>

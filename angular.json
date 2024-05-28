@@ -36,8 +36,10 @@
             "styles": [
               "src/styles.scss",
               "src/app/shared/styles/colors.scss",
+              "src/app/shared/styles/satoshi.scss",
               "node_modules/@tabler/icons-webfont/dist/tabler-icons.min.css",
-              "node_modules/@luismdev/ngx-error-handler/src/lib/styles/ngx-error-handler.scss"
+              "node_modules/@luismdev/ngx-error-handler/src/lib/styles/ngx-error-handler.scss",
+              "node_modules/jsoneditor/dist/jsoneditor.min.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/app/shared/styles"]

@@ -126,7 +126,7 @@
 // $black: #000;
 // $white: #fff;
 
-// $primary: #28a745;
+$primary: #ff007a;
 // $secondary: #6c757d;
 // $success: #28a745;
 // $info: #17a2b8;
@@ -162,37 +162,43 @@
 // $light-border-subtle-dark: $gray-700;
 // $dark-border-subtle-dark: $gray-800;
 
-// $body-color: $gray-300;
-// $body-bg: $gray-900;
-// $body-secondary-color: rgba($body-color, 0.75);
-// $body-secondary-bg: $gray-800;
-// $body-tertiary-color: rgba($body-color, 0.5);
-// $body-tertiary-bg: mix($gray-800, $gray-900, 50%);
-// $body-emphasis-color: $white;
-// $border-color: $gray-700;
-// $border-color-translucent: rgba($white, 0.15);
-// $headings-color: inherit;
-// $link-color: tint-color($primary, 40%);
-// $link-hover-color: shift-color($link-color, -$link-shade-percentage);
-// $code-color: tint-color($code-color, 40%);
-// $mark-color: $body-color;
-// $mark-bg: $yellow-800;
+$gray-100: rgb(247, 248, 249);
+$gray-200: rgb(239, 240, 242);
+$gray-300: rgb(224, 225, 228);
+$gray-400: rgb(161, 161, 170);
+$gray-500: rgb(141, 141, 150);
+$gray-600: rgb(97, 98, 107);
+$gray-700: rgb(58, 61, 64);
+$gray-800: rgb(29, 32, 35);
+$gray-900: rgb(14, 15, 17);
 
-// $body-color-dark: $gray-300;
-// $body-bg-dark: $gray-900;
-// $body-secondary-color-dark: rgba($body-color-dark, 0.75);
-// $body-secondary-bg-dark: $gray-800;
-// $body-tertiary-color-dark: rgba($body-color-dark, 0.5);
-// $body-tertiary-bg-dark: mix($gray-800, $gray-900, 50%);
-// $body-emphasis-color-dark: $white;
-// $border-color-dark: $gray-700;
-// $border-color-translucent-dark: rgba($white, 0.15);
-// $headings-color-dark: inherit;
-// $link-color-dark: tint-color($primary, 40%);
-// $link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
-// $code-color-dark: tint-color($code-color, 40%);
-// $mark-color-dark: $body-color-dark;
-// $mark-bg-dark: $yellow-800;
+$body-color-dark: $gray-300;
+$body-bg-dark: $gray-900;
+$body-secondary-color-dark: rgba($body-color-dark, 0.75);
+$body-secondary-bg-dark: $gray-800;
+$body-tertiary-color-dark: rgba($body-color-dark, 0.5);
+$body-tertiary-bg-dark: mix($gray-800, $gray-900, 50%);
+$body-emphasis-color-dark: $white;
+$border-color-dark: $gray-700;
+$border-color-translucent-dark: rgba($white, 0.1);
+$headings-color-dark: inherit;
+$link-color-dark: tint-color($primary, 40%);
+$link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
+$code-color-dark: tint-color($code-color, 40%);
+$mark-color-dark: $body-color-dark;
+$mark-bg-dark: $yellow-800;
+
+$grays: (
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
+);
 
 //
 // Forms
@@ -240,34 +246,54 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, '$key', 'bg');
 
 // Generate all colors  for the {color}-500, {color}-600... classes
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
-$utilities: map-merge(
-  $utilities,
-  (
-    'color':
-      map-merge(
-        map-get($utilities, 'color'),
-        (
-          values: map-merge(map-get(map-get($utilities, 'color'), 'values'), ($all-colors)),
-        )
-      ),
-  )
-);
+
+@each $color, $value in $all-colors {
+  .bg-#{$color} {
+    background-color: $value !important;
+  }
+  .text-#{$color} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $grays {
+  .bg-gray-#{$key} {
+    background-color: $value !important;
+  }
+  .text-gray-#{$key} {
+    color: $value !important;
+  }
+}
 
 $font-size-base: 14px;
 $input-btn-font-size: $font-size-base;
 $btn-font-size: $font-size-base;
-$btn-font-weight: 500;
+$btn-font-weight: 600;
+// $btn-border-radius: 0rem;
+// $btn-border-radius-sm: 0rem;
+// $btn-border-radius-lg: 0rem;
+// $btn-border-radius-xl: 0rem;
+// $btn-border-radius-xxl: 0rem;
+// $btn-border-radius-pill: 0rem;
 
 $border-radius: 0.5rem;
 $button-border-radius: 0.5rem;
 $card-border-radius: 1rem;
+$card-inner-border-radius: 1rem;
 $border-radius-sm: 0.5rem;
 $border-radius-lg: 0.5rem;
 $border-radius-xl: 1rem;
 $border-radius-xxl: 2rem;
-$border-radius-pill: 50rem;
+$border-radius-pill: 0rem;
 
 $card-spacer-y: 2rem;
 $card-spacer-x: 2rem;
+$badge-border-radius: 0.5rem;
+
+blockquote {
+  border-left: 0.25rem solid $primary;
+  padding-left: 1rem;
+  margin-left: 0;
+}
 
 @import 'bootstrap/scss/bootstrap';

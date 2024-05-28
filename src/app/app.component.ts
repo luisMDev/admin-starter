@@ -23,9 +23,5 @@ export class AppComponent implements OnInit {
         this.titleService.setTitle(config.PROJECT_NAME);
       }
     });
-
-    // TODO: Add theme switching
-    const body = document.body as HTMLElement;
-    body.setAttribute('data-bs-theme', 'light');
   }
 }

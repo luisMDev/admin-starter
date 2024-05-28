@@ -1,5 +1,5 @@
 {
-  "name": "@arcane-auth/console",
+  "name": "@luismdev/admin-starter",
   "version": "0.0.1",
   "scripts": {
     "init": "npm install",
@@ -11,7 +11,7 @@
     "build:pre": "ng build --configuration pre",
     "build:pro": "ng build --configuration production",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint --fix"
   },
   "private": true,
   "dependencies": {
@@ -25,9 +25,9 @@
     "@angular/platform-browser": "^17.2.1",
     "@angular/platform-browser-dynamic": "^17.2.1",
     "@angular/router": "^17.2.1",
-    "@arcane-auth/ngx-client": "^0.0.14",
-    "@luismdev/ngx-error-handler": "^0.0.22",
-    "@luismdev/ngx-utils": "^0.1.12",
+    "@arcane-auth/ngx-client": "^0.0.18",
+    "@luismdev/ngx-error-handler": "^0.0.26",
+    "@luismdev/ngx-utils": "^0.1.16",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "@ngrx/effects": "^17.1.0",
     "@ngrx/entity": "^17.1.0",
