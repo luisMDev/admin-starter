@@ -126,7 +126,7 @@
 // $black: #000;
 // $white: #fff;
 
-$primary: #ff007a;
+$primary: #5ff2c6;
 // $secondary: #6c757d;
 // $success: #28a745;
 // $info: #17a2b8;
@@ -244,7 +244,41 @@ $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
 $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, '$key', 'text');
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, '$key', 'bg');
 
+$pagination-disabled-color: var(--#{$prefix}tertiary-color);
+$pagination-disabled-bg: $body-bg-dark;
+$pagination-disabled-border-color: var(--#{$prefix}border-color);
+
+$pagination-active-bg: $body-color-dark;
+$pagination-active-color: $body-bg-dark;
+$pagination-active-border-color: $body-bg-dark;
+
+// color: rgba(var(--bs-primary-rgb), 1) !important;
+// background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+// background-color: rgba(var(--bs-secondary-bg-rgb), 0.5) !important;
+// font-weight: 700;
+
+// $nav-pills-border-radius:           var(--#{$prefix}border-radius);
+$nav-pills-link-active-color: $primary;
+$nav-pills-link-active-bg: rgba(var(--bs-secondary-bg-rgb), 0.5);
+$nav-link-font-weight: 600;
+$nav-link-color: $body-color-dark;
+$nav-link-hover-color: $body-color-dark;
+$nav-pills-link-active-color: $body-color-dark;
+$nav-pills-link-active-bg: $gray-800;
+
+.nav-link {
+  padding: 0.4rem 0.5rem;
+  i {
+    width: 16px;
+    height: 16px;
+  }
+  &:hover {
+    background: $nav-pills-link-active-bg;
+  }
+}
+
 // Generate all colors  for the {color}-500, {color}-600... classes
+
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
 
 @each $color, $value in $all-colors {
@@ -267,33 +301,77 @@ $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oran
 
 $font-size-base: 14px;
 $input-btn-font-size: $font-size-base;
+// $input-border-radius: 0.25rem;
+// $input-border-radius-sm: 0.25rem;
+// $input-border-radius-lg: 0.25rem;
+// $input-border-radius-xl: 0.25rem;
+// $input-border-radius-xxl: 0.25rem;
 $btn-font-size: $font-size-base;
-$btn-font-weight: 600;
-// $btn-border-radius: 0rem;
-// $btn-border-radius-sm: 0rem;
-// $btn-border-radius-lg: 0rem;
-// $btn-border-radius-xl: 0rem;
-// $btn-border-radius-xxl: 0rem;
-// $btn-border-radius-pill: 0rem;
+// $btn-font-weight: 600;
+$btn-border-radius-sm: $border-radius-sm;
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius-lg;
+$btn-border-radius-xl: $border-radius-xl;
+$btn-border-radius-xxl: $border-radius-xxl;
+$btn-border-radius-pill: $border-radius-pill;
 
-$border-radius: 0.5rem;
-$button-border-radius: 0.5rem;
-$card-border-radius: 1rem;
-$card-inner-border-radius: 1rem;
-$border-radius-sm: 0.5rem;
-$border-radius-lg: 0.5rem;
-$border-radius-xl: 1rem;
-$border-radius-xxl: 2rem;
-$border-radius-pill: 0rem;
+// $button-border-radius: 0.25rem;
+// $card-border-radius: 1rem;
+// $card-inner-border-radius: 1rem;
+$border-radius: calc(0.5rem - 2px);
+$border-radius-sm: calc(0.5rem - 4px);
+$border-radius-lg: calc(0.5rem + 4px);
+$border-radius-xl: calc(0.5rem + 6px);
+$border-radius-xxl: calc(0.5rem + 8px);
+// $border-radius-pill: 0rem;
 
-$card-spacer-y: 2rem;
-$card-spacer-x: 2rem;
-$badge-border-radius: 0.5rem;
+$card-spacer-y: 1rem;
+$card-spacer-x: 1rem;
+$badge-border-radius: 0.25rem;
+
+$table-bg: transparent;
+$table-border-color: $gray-700;
+
+$table-th-font-weight: 500;
+$table-th-font-size: 12px;
+$table-th-color: $gray-600;
 
 blockquote {
   border-left: 0.25rem solid $primary;
   padding-left: 1rem;
   margin-left: 0;
 }
+$font-family-sans-serif: 'Geist', sans-serif;
+
+table {
+  margin: 0 !important;
+  thead {
+    th {
+      font-size: $table-th-font-size;
+      color: $table-th-color !important;
+      font-weight: $table-th-font-weight !important;
+    }
+  }
+
+  tbody {
+    tr:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
 
 @import 'bootstrap/scss/bootstrap';
+
+.btn-primary {
+  @include button-variant(#fff, darken(#fff, 7.5%), $gray-900, lighten(#fff, 5%), lighten(#fff, 10%), darken(#fff, 30%));
+}
+
+.btn-outline-primary {
+  @include button-outline-variant(#fff, #222222, lighten(#fff, 5%), #fff);
+}

@@ -8,16 +8,10 @@ import { provideRouter } from '@angular/router';
 import { ArcUserModule } from '@arcane-auth/ngx-client';
 import { NgxErrorHandlerModule } from '@luismdev/ngx-error-handler';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { environment } from '../../environments/environment';
 import { routes } from './app.routing';
-import { EFFECTS } from './core/store/index.effects';
-import { REDUCERS } from './core/store/index.reducer';
 
 export function HttpLoaderFactory(http: HttpBackend): MultiTranslateHttpLoader {
   return new MultiTranslateHttpLoader(http, [
@@ -42,10 +36,6 @@ export const appConfig: ApplicationConfig = {
           deps: [HttpBackend],
         },
       }),
-      StoreModule.forRoot(REDUCERS),
-      EffectsModule.forRoot(EFFECTS),
-      StoreRouterConnectingModule.forRoot(),
-      StoreDevtoolsModule.instrument({ maxAge: 100 }),
       ArcUserModule.forRoot({
         api: environment.api.arcaneAuth,
         login: '/auth/login',

@@ -1,14 +1,14 @@
-import { SideBarMenu } from '../interfaces/side-bar-menu.interface';
+import { DtlSideBarMenu } from '@dotted-labs/ngx-bootstrap-components/side-bar';
 
-export const SideBarMenuModel: SideBarMenu = [
+export const SideBarMenuModel: DtlSideBarMenu = [
   {
     title: '',
     items: [
       {
-        name: 'Home',
-        url: '/l/home',
-        icon: 'ti ti-dashboard',
-        active: true,
+        icon: 'ti ti-home',
+        name: 'Dashboard',
+        url: 'l/home',
+        isEnabled: true,
       },
     ],
   },

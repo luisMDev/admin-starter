@@ -1,0 +1,99 @@
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-UltraLight.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-UltraLight.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-UltraLight.ttf') format('truetype');
+//   font-weight: 100;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-Light.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-Light.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-Light.ttf') format('truetype');
+//   font-weight: 300;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-Regular.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-Regular.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-Regular.ttf') format('truetype');
+//   font-weight: 400;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-Medium.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-Medium.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-Medium.ttf') format('truetype');
+//   font-weight: 500;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-Medium.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-Medium.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-Medium.ttf') format('truetype');
+//   font-weight: 600;
+//   font-display: swap;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-Bold.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-Bold.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-Bold.ttf') format('truetype');
+//   font-weight: 700;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-Black.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-Black.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-Black.ttf') format('truetype');
+//   font-weight: 800;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Geist';
+//   src:
+//     url('/assets/fonts/Geist/Geist-UltraBlack.woff2') format('woff2'),
+//     url('/assets/fonts/Geist/Geist-UltraBlack.woff') format('woff'),
+//     url('/assets/fonts/Geist/Geist-UltraBlack.ttf') format('truetype');
+//   font-weight: 900;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// /**
+// * This is a variable font
+// * You can control variable axes as shown below:
+// * font-variation-settings: wght 900.0;
+// *
+// * available axes:
+// 'wght' (range from 300.0 to 900.0
+// */
+@font-face {
+  font-family: 'Geist';
+  src:
+    url('/assets/fonts/Geist/GeistVF.woff2') format('woff2'),
+    url('/assets/fonts/Geist/GeistVF.woff') format('woff'),
+    url('/assets/fonts/Geist/GeistVF.ttf') format('truetype');
+  // font-weight: 300 900;
+  // font-display: swap;
+  // font-style: normal;
+}

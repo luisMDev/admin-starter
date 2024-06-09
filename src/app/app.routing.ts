@@ -33,7 +33,7 @@ export const routes: Routes = [
   {
     canActivate: [AuthGuard],
     path: 'l',
-    loadComponent: () => import('./views/dashboard/dashboard.component').then((m) => m.DashboardComponent),
+    loadComponent: () => import('./views/layout/layout.component').then((m) => m.LayoutComponent),
     children: [
       {
         path: '',
@@ -42,11 +42,11 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        loadComponent: () => import('./views/dashboard/views/home/home.component').then((m) => m.HomeComponent),
+        loadComponent: () => import('./views/layout/views/home/home.component').then((m) => m.HomeComponent),
       },
       {
         path: 'profile',
-        loadComponent: () => import('./views/dashboard/views/profile/profile.component').then((m) => m.ProfileComponent),
+        loadComponent: () => import('./views/layout/views/profile/profile.component').then((m) => m.ProfileComponent),
       },
     ],
   },
