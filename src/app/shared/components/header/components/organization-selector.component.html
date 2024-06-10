@@ -1,0 +1,17 @@
+<div ngbDropdown>
+  <button class="btn btn-sm" ngbDropdownToggle>
+    <b class="me-1">
+      {{ organizationStore.selectedOrganization().name }}
+    </b>
+  </button>
+  <div ngbDropdownMenu>
+    @for (organization of organizationStore.entities(); track organization.id) {
+      <button ngbDropdownItem (click)="organizationStore.selectOrganization(organization.id)">{{ organization.name }}</button>
+    }
+    <div class="dropdown-divider"></div>
+    <button ngbDropdownItem routerLink="/organizations/new">
+      <i class="ti ti-circle-plus"></i>
+      Add Organization
+    </button>
+  </div>
+</div>

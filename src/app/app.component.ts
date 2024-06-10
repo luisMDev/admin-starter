@@ -1,7 +1,7 @@
-import { ArcConfig, ArcAuthService } from '@arcane-auth/ngx-client';
-import { Component, OnInit } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+import { ConfigStore } from '@arcane-auth/ngx-client';
 
 @Component({
   selector: 'admin-starter-root',
@@ -10,17 +10,15 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
 })
-export class AppComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    private arcAuthService: ArcAuthService,
-  ) {}
+export class AppComponent {
+  readonly #titleService = inject(Title);
 
-  public ngOnInit(): void {
-    this.titleService.setTitle('User Manager Console');
-    this.arcAuthService.config$.subscribe((config: ArcConfig) => {
-      if (config) {
-        this.titleService.setTitle(config.PROJECT_NAME);
+  public readonly configStore = inject(ConfigStore);
+
+  constructor() {
+    effect(() => {
+      if (this.configStore.config()?.PROJECT_NAME) {
+        this.#titleService.setTitle(this.configStore.config().PROJECT_NAME);
       }
     });
   }

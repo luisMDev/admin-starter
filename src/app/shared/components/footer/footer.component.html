@@ -1,5 +1,5 @@
 <div class="container">
-  @if (config$ | async; as config) {
+  @if (configStore.config(); as config) {
     <footer class="d-flex flex-wrap justify-content-between align-items-center">
       <section class="col d-flex align-items-center my-1">
         <span class="fs-7 text-muted me-4">{{ 'FOOTER.ALL_RIGHTS_RESERVED' | translate: { name: config.PROJECT_NAME, year: year } }} </span>

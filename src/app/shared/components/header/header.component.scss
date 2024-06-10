@@ -2,6 +2,8 @@
   padding: 0;
   background: linear-gradient(-180deg, #0e0f11, #ff000000);
   display: block;
+  position: relative;
+  z-index: 100000;
   .logo {
     height: 30px;
     object-fit: contain;

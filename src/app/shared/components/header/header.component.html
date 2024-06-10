@@ -1,8 +1,9 @@
-@if (config$ | async; as config) {
+@if (configStore.config(); as config) {
   <div class="container">
     <header class="d-flex flex-wrap justify-content-between pt-3 pb-5">
-      <div class="logo">
-        <img class="mb-4 img-fluid logo" src="/assets/images/logo-min.png" alt="" />
+      <div class="logo d-flex align-items-center gap-3">
+        <img class="img-fluid logo" src="/assets/images/logo-min.png" alt="" />
+        <admin-starter-organization-selector></admin-starter-organization-selector>
       </div>
       <ul class="nav nav-pills">
         @if (config.LINK_DOCS) {
@@ -16,8 +17,8 @@
           <a class="nav-link link-body-emphasis d-flex justify-content-between align-items-center h-100 pe-0" aria-current="page">
             <div class="d-flex align-items-center">
               <img
-                [title]="(user$ | async).name"
-                [src]="(user$ | async).avatar"
+                [title]="userStore.user().name"
+                [src]="userStore.user().avatar"
                 class="me-3 bg-info rounded-circle rounded-circle"
                 style="width: 20px; height: 20px"
               />
