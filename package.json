@@ -25,7 +25,7 @@
     "@angular/platform-browser": "^17.2.1",
     "@angular/platform-browser-dynamic": "^17.2.1",
     "@angular/router": "^17.2.1",
-    "@arcane-auth/ngx-client": "^0.1.0-alpha.8",
+    "@arcane-auth/ngx-client": "^0.1.1",
     "@dotted-labs/ngx-bootstrap-components": "^0.0.11",
     "@dotted-labs/ngx-signal-utils": "^0.0.4",
     "@luismdev/ngx-error-handler": "^0.0.26",

@@ -1,0 +1,27 @@
+<div class="card mb-4 w-100">
+  <div class="card-header">
+    <span>TOKEN</span>
+  </div>
+  <div class="card-body">
+    <small class="text-break">
+      {{ userStore.token() }}
+    </small>
+  </div>
+</div>
+<div class="card mb-4 w-100">
+  <div class="card-header">
+    <span>USER</span>
+  </div>
+  <div class="card-body">
+    <pre>
+      {{ userStore.user() | json }}
+    </pre>
+  </div>
+</div>
+<div class="card mb-4 w-100">
+  <div class="card-body d-flex gap-3">
+    <button class="btn btn-primary" (click)="testRoleGuard()">Test Role Guard</button>
+    <button class="btn btn-primary" (click)="testPermissionGuard()">Test Permission Guard</button>
+    <button class="btn btn-primary" (click)="trackMetric()">Track Metric</button>
+  </div>
+</div>
